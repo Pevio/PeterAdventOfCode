@@ -1,0 +1,29 @@
+{
+  "name": "peter-advent-of-code",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "node-fetch": "^3.1.0",
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|ts|tsx|css|json)\"",
+    "format": "npm run prettier -- --write",
+    "lint": "eslint --ext=.jsx,.js,.tsx,.ts --fix --max-warnings=0 ./src"
+  },
+  "eslintConfig": {
+    "rules": {
+      "react-hooks/exhaustive-deps": "off",
+      "no-empty": "warn"
+    },
+    "ignorePatterns": [
+      "**/src/tests/*"
+    ]
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    "*.--write": "prettier --write"
+  },
+  "type": "module"
+}
