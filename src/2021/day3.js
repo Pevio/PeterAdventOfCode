@@ -2,23 +2,25 @@ import * as inputUtils from "../utils/inputUtils.js";
 
 const day2 = () => {
   inputUtils.stringArray(2021, 3, (input) => {
-    // let counts = [0, 0,0,0,0,0,0,0,0,0,0,0]
-    // input.forEach((item) => {
-    //   for (let i = 0; i < item.length; i++) {
-    //     if (item.charAt(i) === "0") counts[i]++
-    //   }
-    // })
-    // let e = 0
-    // let g = 0
-    // for (let i = 0; i < 12; i++) {
-    //   if (counts[i] > (input.length / 2)) {
-    //     e += Math.pow(2, 11 - i)
-    //   } else {
-    //     g += Math.pow(2, 11-i)
-    //   }
-    // }
-    // console.log(e * g)
+    // Part 1
+    let counts = [0, 0,0,0,0,0,0,0,0,0,0,0]
+    input.forEach((item) => {
+      for (let i = 0; i < item.length; i++) {
+        if (item.charAt(i) === "0") counts[i]++
+      }
+    })
+    let e = 0
+    let g = 0
+    for (let i = 0; i < 12; i++) {
+      if (counts[i] > (input.length / 2)) {
+        e += Math.pow(2, 11 - i)
+      } else {
+        g += Math.pow(2, 11-i)
+      }
+    }
+    console.log(e * g)
 
+    // Part 2
     let o = [...input]
     for (let i = 0; i < 12; i++) {
       let ones = 0;
@@ -46,7 +48,6 @@ const day2 = () => {
         co2 = co2.filter((item) => item.charAt(i) === (onesWin ? "1" : "0"))
       }
     }
-    console.log(o, co2)
     let e = 0
     let g = 0
     for (let i = 0; i < 12; i++) {

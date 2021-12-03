@@ -14,6 +14,11 @@ export const stringArray = (year, day, callback) => {
     callback(lines)
   })
 }
+export const charDoubleArray = (year, day, callback) => {
+  stringArray(year, day, (data) => {
+    callback(data.map((line) => line.split("")))
+  })
+}
 // Parses the string array to numbers
 export const numberArray = (year, day, callback) => {
   stringArray(year, day, (lines) => {
