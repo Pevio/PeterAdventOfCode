@@ -1,9 +1,10 @@
 import * as inputUtils from "../utils/inputUtils.js";
+import * as utils from "../utils/generalUtils.js";
 
 const day2 = () => {
   inputUtils.stringArray(2021, 3, (input) => {
     // Part 1
-    let counts = [0, 0,0,0,0,0,0,0,0,0,0,0]
+    let counts = Array(12).fill(0)
     input.forEach((item) => {
       for (let i = 0; i < item.length; i++) {
         if (item.charAt(i) === "0") counts[i]++
@@ -48,18 +49,18 @@ const day2 = () => {
         co2 = co2.filter((item) => item.charAt(i) === (onesWin ? "1" : "0"))
       }
     }
-    let e = 0
-    let g = 0
+    let e1 = 0
+    let g1 = 0
     for (let i = 0; i < 12; i++) {
       if (o[0].charAt(i) === "1") {
-        e += Math.pow(2, 11 - i)
+        e1 += Math.pow(2, 11 - i)
       }
       if (co2[0].charAt(i) === "1") {
-        g += Math.pow(2, 11 - i)
+        g1 += Math.pow(2, 11 - i)
       }
     }
 
-    console.log(e * g)
+    console.log(e1 * g1)
 
   })
 
