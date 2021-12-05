@@ -1,3 +1,3 @@
-import day from "./src/2021/day5.js"
+import day from "./src/2020/day4.js"
 
 day()
