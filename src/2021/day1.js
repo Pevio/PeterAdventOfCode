@@ -1,6 +1,6 @@
-import {numberArray, stringArray} from "../utils/inputUtils.js";
+import {numberArray} from "../utils/inputUtils.js";
 
-const day1 = () => {
+const day = () => {
   numberArray(2021, 1, (input) => {
     let result = 0;
     input.forEach((item, index) => {
@@ -10,4 +10,4 @@ const day1 = () => {
   })
 }
 
-export default day1;
+export default day;

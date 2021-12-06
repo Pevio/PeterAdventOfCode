@@ -1,7 +1,6 @@
 import * as inputUtils from "../utils/inputUtils.js";
-import * as utils from "../utils/generalUtils.js";
 
-const day2 = () => {
+const day = () => {
   inputUtils.stringArray(2021, 3, (input) => {
     // Part 1
     let counts = Array(12).fill(0)
@@ -66,4 +65,4 @@ const day2 = () => {
 
 }
 
-export default day2;
+export default day;

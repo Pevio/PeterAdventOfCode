@@ -1,7 +1,7 @@
-import {numberArray, stringArray} from "../utils/inputUtils.js";
+import { stringArray} from "../utils/inputUtils.js";
 import { isSuperset} from "../utils/generalUtils.js";
 
-const day1 = () => {
+const day = () => {
   stringArray(2021, 4, (input) => {
     const points = {}
     let numbers = []
@@ -78,4 +78,4 @@ const day1 = () => {
   })
 }
 
-export default day1;
+export default day;
