@@ -32,7 +32,7 @@ export const numberArray = (year, day, callback) => {
 
 export const parseInts = (line, regex = ",") => {
   const result = []
-  line.split(",").forEach((item) => {
+  line.split(regex).forEach((item) => {
     result.push(Number.parseInt(item))
   })
   return result
