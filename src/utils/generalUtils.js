@@ -16,3 +16,10 @@ export const isSuperset = (set, subset) => {
   }
   return true
 }
+export const setDiff = (s1, s2) => {
+  const res = new Set()
+  Array.from(s1).forEach((value) => {
+    if (!s2.has(value)) res.add(value)
+  })
+  return res
+}
