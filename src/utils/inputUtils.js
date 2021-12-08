@@ -2,7 +2,7 @@ import fs from "fs"
 
 // Gets the input in a single string
 const getInput = (year, day, callback) => {
-  fs.readFile(`src/${year}/input/day${day}input.txt`, "utf8", (err, data) => {
+  fs.readFile(`input/${year}/day${day}input.txt`, "utf8", (err, data) => {
     if (err) throw err
     callback(data)
   })
