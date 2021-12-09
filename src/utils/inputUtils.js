@@ -29,7 +29,19 @@ export const numberArray = (year, day, callback) => {
     callback(result)
   })
 }
-
+export const numberDoubleArray = (year, day, callback) => {
+  stringArray(year, day, (lines) => {
+    const result = [];
+    lines.forEach(item => {
+      const lineResult = []
+      item.split(regex).forEach((item) => {
+        lineResult.push(Number.parseInt(item))
+      })
+      result.push(lineResult)
+    })
+    callback(result)
+  }, regex = "")
+}
 export const parseInts = (line, regex = ",") => {
   const result = []
   line.split(regex).forEach((item) => {

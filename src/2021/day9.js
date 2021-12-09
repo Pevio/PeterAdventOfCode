@@ -5,7 +5,6 @@ const day = () => {
   inputUtil.charDoubleArray(2021, 9, (input) => {
     let result = 0
 
-
     for (let i = 0; i < input.length; i++) {
       for (let j = 0; j < input[i].length; j++) {
         let isLow = true
