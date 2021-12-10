@@ -19,7 +19,6 @@ const day = () => {
       const stack = []
       let corrupted = false
       for (let j = 0; j < input[i].length; j++) {
-        if (i === 0) console.log(stack)
         const inputItem = input[i][j]
         if (["(", "{", "[", "<"].includes(inputItem)){
           stack.push(inputItem)
@@ -46,14 +45,12 @@ const day = () => {
     let p2 = []
     incomplete.forEach((stack) => {
       let score = 0
-      //console.log(stack.length)
       for (let i = stack.length - 1; i >= 0; i--) {
         score = (score * 5) + points[stack[i]]
       }
       p2.push(score)
     })
-    console.log(p2)
-    console.log(p2.sort((s1, s2) => s2 - s1)[Math.floor(p2.length / 2)], p2.length)
+    console.log(result, p2.sort((s1, s2) => s2 - s1)[Math.floor(p2.length / 2)])
   })
 }
 
